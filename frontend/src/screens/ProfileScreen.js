@@ -37,6 +37,7 @@ export default function ProfileScreen() {
     if (password) {
       if (password !== confirmPassword) {
         toast.error('Passwords do not match');
+        return;
       }
     }
     try {

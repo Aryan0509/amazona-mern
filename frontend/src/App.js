@@ -32,6 +32,7 @@ function App() {
     localStorage.removeItem('paymentMethod');
     // navigate('/signin');
     // window.location.href = '/signin';
+    window.location.href = '/signin';
   };
   return (
     <BrowserRouter>

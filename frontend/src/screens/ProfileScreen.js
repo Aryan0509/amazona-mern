@@ -34,7 +34,11 @@ export default function ProfileScreen() {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-
+    if (password) {
+      if (password !== confirmPassword) {
+        toast.error('Passwords do not match');
+      }
+    }
     try {
       const { data } = await axios.put(
         `/api/user/profile`,
@@ -89,7 +93,7 @@ export default function ProfileScreen() {
           ></Form.Control>
         </Form.Group>
         <Form.Group className="mb-3" controlId="confirmPassword">
-          <Form.Label>Confirm Passwprd</Form.Label>
+          <Form.Label>Confirm Password</Form.Label>
           <Form.Control
             type="password"
             onChange={(e) => setConfirmPassword(e.target.value)}

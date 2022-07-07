@@ -20,6 +20,9 @@
   "bugs": {
     "url": "https://github.com/Aryan0509/amazona/issues"
   },
+  "engines": {
+    "node": "16.13.1"
+  },
   "homepage": "https://github.com/Aryan0509/amazona#readme",
   "description": ""
 }

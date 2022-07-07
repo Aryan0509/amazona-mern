@@ -56,6 +56,8 @@ export default function ProfileScreen() {
       ctxDispatch({ type: 'SIGNIN_COMPLETE', payload: data });
       localStorage.setItem('userInfo', JSON.stringify(data));
       toast.success('User updated successfully');
+      // setPassword('');
+      // setConfirmPassword('');
     } catch (err) {
       dispatch({ type: 'FETCH_FAIL' });
       toast.error(getErrors(err));
